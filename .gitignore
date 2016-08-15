@@ -1,0 +1,9 @@
+/platforms
+/.vs
+/bin
+/bld
+fluency-plus-cordova.jsproj
+fluency-plus-cordova.jsproj.user
+fluency-plus-cordova.sln
+taco.json
+*.DS_Store

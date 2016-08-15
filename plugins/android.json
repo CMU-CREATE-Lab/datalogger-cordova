@@ -1,0 +1,25 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "org.cmucreatelab_fluency_plus"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "org.cmucreatelab_fluency_plus"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "org.cmucreatelab_fluency_plus"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "org.cmucreatelab_fluency_plus"
+        }
+    }
+}
