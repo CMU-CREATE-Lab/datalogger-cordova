@@ -13,7 +13,8 @@ var HomePage = {
     console.log("HomePage.onDeviceReady");
 
     // click listeners
-    $(".home-channels-li-click").click(HomePage.onClickTest);
+    $(".home-channels-li-click").click(HomePage.onClickChannel);
+    $("#btn-new-channel").click(HomePage.onClickNewChannel);
   },
 
 
@@ -23,9 +24,15 @@ var HomePage = {
   // callbacks
 
 
-  onClickTest: function() {
-    console.log("onClickTest");
-    $.mobile.pageContainer.pagecontainer("change", "#page3", { changeHash: false, transition: "none" });
-  }
+  onClickChannel: function() {
+    console.log("onClickChannel");
+    $.mobile.pageContainer.pagecontainer("change", "#show_channel", { changeHash: false, transition: "none" });
+  },
+
+
+  onClickNewChannel: function() {
+    console.log("onClickChannel");
+    $.mobile.pageContainer.pagecontainer("change", "#new_channel", { changeHash: false, transition: "none" });
+  },
 
 }

@@ -25,29 +25,19 @@
 
 
     <div data-role="page" id="home">
-      <!-- panel -->
-      <div data-role="panel" id="about-panel" data-display="overlay">
-        <a href="#" data-rel="close" data-role="button" data-icon="carat-l" data-inline="true">Close</a>
-        <h3>Navigate</h3>
-        <ul data-role="listview" data-inset="true" data-icon="false">
-          <li><a href="#home" data-transition="none">Home</a></li>
-          <li><a href="#page2" data-transition="none">Page II</a></li>
-          <li><a href="#page3" data-transition="none">Page III</a></li>
-        </ul>
-      </div>
       <!-- header -->
       <div data-role="header" data-position="fixed" data-tap-toggle="false">
-        <a href="#about-panel" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left">Settings</a>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left">Settings</a>
         <h1>Data Logger</h1>
       </div>
       <!-- main -->
       <div role="main" class="ui-content">
         <ul data-role="listview" data-filter="true" data-filter-placeholder="Enter Channel Name" data-inset="true">
             <li><a class="home-channels-li-click" href="#">MyChannelName</a></li>
-            <li><a href="#">ClassroomA</a></li>
-            <li><a href="#">Room123</a></li>
+            <li><a class="home-channels-li-click" href="#">ClassroomA</a></li>
+            <li><a class="home-channels-li-click" href="#">Room123</a></li>
         </ul>
-        <input type="button" value="Create New Channel" />
+        <input id="btn-new-channel" type="button" value="Create New Channel" />
       </div>
       <!-- footer -->
       <div data-role="footer" data-position="fixed" data-id="settings_1" data-tap-toggle="false">
@@ -60,20 +50,10 @@
     </div>
 
 
-    <div data-role="page" id="page2">
-      <!-- panel -->
-      <div data-role="panel" id="about-panel" data-display="overlay">
-        <a href="#" data-rel="close" data-role="button" data-icon="carat-l" data-inline="true">Close</a>
-        <h3>Navigate</h3>
-        <ul data-role="listview" data-inset="true" data-icon="false">
-          <li><a href="#home" data-transition="none">Home</a></li>
-          <li><a href="#page2" data-transition="none">Page II</a></li>
-          <li><a href="#page3" data-transition="none">Page III</a></li>
-        </ul>
-      </div>
+    <div data-role="page" id="new_channel">
       <!-- header -->
       <div data-role="header" data-position="fixed" data-tap-toggle="false">
-        <a href="#about-panel" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left">Settings</a>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left">Settings</a>
         <h1>Data Logger</h1>
       </div>
       <!-- main -->
@@ -107,20 +87,10 @@
     </div>
 
 
-    <div data-role="page" id="page3">
-      <!-- panel -->
-      <div data-role="panel" id="about-panel" data-display="overlay">
-        <a href="#" data-rel="close" data-role="button" data-icon="carat-l" data-inline="true">Close</a>
-        <h3>Navigate</h3>
-        <ul data-role="listview" data-inset="true" data-icon="false">
-          <li><a href="#home" data-transition="none">Home</a></li>
-          <li><a href="#page2" data-transition="none">Page II</a></li>
-          <li><a href="#page3" data-transition="none">Page III</a></li>
-        </ul>
-      </div>
+    <div data-role="page" id="show_channel">
       <!-- header -->
       <div data-role="header" data-position="fixed" data-tap-toggle="false">
-        <a href="#about-panel" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left">Settings</a>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left">Settings</a>
         <h1>Data Logger</h1>
       </div>
       <!-- main -->
