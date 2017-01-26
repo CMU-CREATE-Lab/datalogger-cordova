@@ -1,0 +1,7 @@
+/platforms
+/plugins
+/.vs
+/bin
+/bld
+taco.json
+*.DS_Store

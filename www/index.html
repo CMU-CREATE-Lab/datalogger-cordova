@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no"
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- css -->
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/fullscreen-pages.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <!-- libraries -->
+        <script src="lib/jquery-1.11.3.min.js"></script>
+        <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+        <script src="cordova.js"></script>
+        <!-- app-related scripts -->
+    </head>
+    <body>
+
+
+      <div data-role="page" id="home">
+        <!-- panel -->
+        <div data-role="panel" id="about-panel" data-display="overlay">
+          <a href="#" data-rel="close" data-role="button" data-icon="carat-l" data-inline="true">Close</a>
+          <h3>Navigate</h3>
+          <ul data-role="listview" data-inset="true" data-icon="false">
+            <li><a href="#home" data-transition="none">Home</a></li>
+            <li><a href="#page2" data-transition="none">Page II</a></li>
+            <li><a href="#page3" data-transition="none">Page III</a></li>
+          </ul>
+        </div>
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-tap-toggle="false">
+          <a href="#about-panel" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left">Settings</a>
+          <h1>Data Logger</h1>
+        </div>
+        <!-- main -->
+        <div role="main" class="ui-content">
+          <ul data-role="listview" data-filter="true" data-filter-placeholder="Enter Channel Name" data-inset="true">
+              <li><a href="#">MyChannelName</a></li>
+              <li><a href="#">ClassroomA</a></li>
+              <li><a href="#">Room123</a></li>
+          </ul>
+          <input type="button" value="Create New Channel" />
+        </div>
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-id="settings_1" data-tap-toggle="false">
+          <div data-role="navbar">
+            <ul>
+              <li><a href="#" data-icon="star" data-transition="none">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div data-role="page" id="page2">
+        <!-- panel -->
+        <div data-role="panel" id="about-panel" data-display="overlay">
+          <a href="#" data-rel="close" data-role="button" data-icon="carat-l" data-inline="true">Close</a>
+          <h3>Navigate</h3>
+          <ul data-role="listview" data-inset="true" data-icon="false">
+            <li><a href="#home" data-transition="none">Home</a></li>
+            <li><a href="#page2" data-transition="none">Page II</a></li>
+            <li><a href="#page3" data-transition="none">Page III</a></li>
+          </ul>
+        </div>
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-tap-toggle="false">
+          <a href="#about-panel" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left">Settings</a>
+          <h1>Data Logger</h1>
+        </div>
+        <!-- main -->
+        <div role="main" class="ui-content">
+          <h3>New Channel</h3>
+          <div class="ui-field-contain">
+            <label for="channel-name">Name</label>
+            <input type="text" name="channel" id="channel-name" value="" data-clear-btn="true">
+          </div>
+          <div class="ui-field-contain">
+            <label for="channel-description">Description</label>
+            <textarea name="channel-desc-textarea" id="channel-desc-textarea" data-clear-btn="true"></textarea>
+          </div>
+          <div class="ui-field-contain" style="margin: 0 0 2em 0;">
+            <label for="channel-type" class="select">Channel Type</label>
+            <select name="channel-type" id="channel-type">
+              <option value="one">Type I</option>
+              <option value="two">Type II</option>
+            </select>
+          </div>
+          <input type="button" value="Create!" />
+        </div>
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-id="settings_1" data-tap-toggle="false">
+          <div data-role="navbar">
+            <ul>
+              <li><a href="#home" data-icon="star" data-transition="none">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div data-role="page" id="page3">
+        <!-- panel -->
+        <div data-role="panel" id="about-panel" data-display="overlay">
+          <a href="#" data-rel="close" data-role="button" data-icon="carat-l" data-inline="true">Close</a>
+          <h3>Navigate</h3>
+          <ul data-role="listview" data-inset="true" data-icon="false">
+            <li><a href="#home" data-transition="none">Home</a></li>
+            <li><a href="#page2" data-transition="none">Page II</a></li>
+            <li><a href="#page3" data-transition="none">Page III</a></li>
+          </ul>
+        </div>
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-tap-toggle="false">
+          <a href="#about-panel" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left">Settings</a>
+          <h1>Data Logger</h1>
+        </div>
+        <!-- main -->
+        <div role="main" class="ui-content">
+          <h3>MyChannelName</h3>
+          <p>channel description appears below the name.</p>
+          <div data-role="collapsible" data-collapsed="false">
+            <h3>location</h3>
+            <div class="ui-field-contain">
+              <label for="datapoint-latitude">Latitude</label>
+              <label name="datapoint-latitude">#####</label>
+            </div>
+            <div class="ui-field-contain">
+              <label for="datapoint-longitude">Longitude</label>
+              <label name="datapoint-longitude">#####</label>
+            </div>
+            <div class="ui-field-contain">
+              <input type="button" value="Update Location" />
+            </div>
+          </div>
+
+          <div data-role="collapsible" data-collapsed="false">
+            <h3>temperature</h3>
+            <input type="number" name="datapoint-key1" id="datapoint-key1" value="">
+            <p>measured in degrees celsius.</p>
+          </div>
+          <input type="button" value="Log Your Data!" />
+        </div>
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-id="settings_1" data-tap-toggle="false">
+          <div data-role="navbar">
+            <ul>
+              <li><a href="#home" data-icon="star" data-transition="none">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </body>
+</html>
