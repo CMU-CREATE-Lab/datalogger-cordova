@@ -5,6 +5,8 @@ var Constants = {
 
   // Page Ids
   HOME_PAGE: "home",
+  NEW_CHANNEL_PAGE: "new_channel",
+  SHOW_CHANNEL_PAGE: "show_channel",
 
   // Location services enums
   AuthorizationEnum: {

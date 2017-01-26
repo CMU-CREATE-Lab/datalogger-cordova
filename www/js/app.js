@@ -29,6 +29,10 @@ var App = {
         window.addEventListener("native.keyboardshow", onKeyboardShowInHomePage);
         window.addEventListener('native.keyboardhide', onKeyboardHide);
         break;
+      case Constants.NEW_CHANNEL_PAGE:
+        break;
+      case Constants.SHOW_CHANNEL_PAGE:
+        break;
     }
   },
 
@@ -45,6 +49,8 @@ var App = {
     $(document).on("pagecontainershow", App.onPageContainerShow);
 
     HomePage.onDeviceReady();
+    NewChannelPage.onDeviceReady();
+    ShowChannelPage.onDeviceReady();
     App.isDeviceReady = true;
 
     Location.requestLocationPermission();

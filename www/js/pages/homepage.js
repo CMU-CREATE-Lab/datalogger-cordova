@@ -3,9 +3,6 @@ var HomePage = {
 
   initialize: function () {
     console.log("HomePage.initialize");
-
-    // browser compatibility issues (Yay?)
-    $("#home-panel").find(".ui-btn-active").removeClass("ui-btn-active");
   },
 
 
