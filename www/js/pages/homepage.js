@@ -3,6 +3,15 @@ var HomePage = {
 
   initialize: function () {
     console.log("HomePage.initialize");
+    // empty the list
+    $("#channel-list").empty();
+    // add to list
+    $("#channel-list").append('<li><a class="home-channels-li-click" href="#">Dynamic I</a></li>');
+    $("#channel-list").append('<li><a class="home-channels-li-click" href="#">Second Dynamic</a></li>');
+    // refresh the UI
+    $("#channel-list").listview("refresh");
+    // add click listener
+    $(".home-channels-li-click").click(HomePage.onClickChannel);
   },
 
 
