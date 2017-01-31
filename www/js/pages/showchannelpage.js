@@ -5,6 +5,11 @@ var ShowChannelPage = {
 
   initialize: function () {
     console.log("ShowChannelPage.initialize");
+
+    if (ShowChannelPage.channel != null) {
+      //console.log("showing channel "+ShowChannelPage.channel.name);
+      ShowChannelPage.initializeWithChannel(ShowChannelPage.channel);
+    }
   },
 
 
@@ -14,6 +19,14 @@ var ShowChannelPage = {
 
 
   // helper functions
+
+
+  initializeWithChannel(channel) {
+    $("#show_channel_name").text(channel.name);
+    $("#show_channel_description").text(channel.description);
+    // TODO populate fields for channel
+    // $("#show_channel_fields");
+  }
 
 
   // callbacks
