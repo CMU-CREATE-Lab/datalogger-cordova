@@ -1,5 +1,7 @@
 var ShowChannelPage = {
 
+  channel: null,
+
 
   initialize: function () {
     console.log("ShowChannelPage.initialize");

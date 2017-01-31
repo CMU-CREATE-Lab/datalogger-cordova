@@ -8,7 +8,7 @@ var App = {
 
 
   initialize: function () {
-    console.log("onInitialize");
+    console.log("App.onInitialize");
     document.addEventListener("deviceready", this.onDeviceReady, false);
   },
 
@@ -30,8 +30,10 @@ var App = {
         window.addEventListener('native.keyboardhide', onKeyboardHide);
         break;
       case Constants.NEW_CHANNEL_PAGE:
+        NewChannelPage.initialize();
         break;
       case Constants.SHOW_CHANNEL_PAGE:
+        ShowChannelPage.initialize();
         break;
     }
   },
@@ -65,9 +67,6 @@ var App = {
 
   onResume: function() {
     console.log("onResume");
-
-    var pageId = $.mobile.pageContainer.pagecontainer("getActivePage")[0].id;
-    App.initializePage(pageId);
   },
 
 

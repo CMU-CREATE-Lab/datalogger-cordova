@@ -12,7 +12,7 @@ function Channel(id, name, description, fields) {
 
   // check that fields are instances of Field
   for (var i in this.fields) {
-    if (!(i instanceof Field)) {
+    if (!(this.fields[i] instanceof Field)) {
       throw "Channel found element of fields that is not instanceof Field.";
     }
   }
