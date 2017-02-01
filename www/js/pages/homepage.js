@@ -26,10 +26,15 @@ var HomePage = {
     var fields = [];
     fields.push( new Field("x","description","string") );
     fields.push( new Field("y","description","string") );
-    HomePage.channels.push( new Channel("id_abcdef","MyChannel","description",fields) );
+    HomePage.channels.push( new Channel("id_abcdef","MyChannel","Contains two strings, x and y.",fields) );
     var fields = [];
     fields.push( new Field("z","description","string") );
-    HomePage.channels.push( new Channel("channel_hash_here","SecondChannel","description",fields) );
+    HomePage.channels.push( new Channel("channel_hash_here","SecondChannel","This is the second channel. It only has one field, z, which is a string.",fields) );
+    var fields = [];
+    fields.push( new Field("latitude","description","number") );
+    fields.push( new Field("longitude","description","number") );
+    fields.push( new Field("other","description","string") );
+    HomePage.channels.push( new Channel("real_one","LocationMapping","Uses latitude/longitude for location mapping as well as a field for 'other' data.",fields) );
   },
 
 

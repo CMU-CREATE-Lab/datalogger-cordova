@@ -102,25 +102,34 @@
 
         <div id="show_channel_fields">
           <!-- populate channel fields -->
-          <div data-role="collapsible" data-collapsed="false">
-            <h3>location</h3>
-            <div class="ui-field-contain">
-              <label for="datapoint-latitude">Latitude</label>
-              <label name="datapoint-latitude">#####</label>
-            </div>
-            <div class="ui-field-contain">
-              <label for="datapoint-longitude">Longitude</label>
-              <label name="datapoint-longitude">#####</label>
-            </div>
-            <div class="ui-field-contain">
-              <input type="button" value="Update Location" />
-            </div>
+        </div>
+        <!-- collapsible samples -->
+        <div data-role="collapsible" data-collapsed="false">
+          <h3>number</h3>
+          <input type="number" value="">
+          <p>description here</p>
+        </div>
+        <div data-role="collapsible" data-collapsed="false">
+          <h3>string</h3>
+          <input type="text" value="">
+          <p>description here</p>
+        </div>
+        <div data-role="collapsible" data-collapsed="false">
+          <h3>boolean</h3>
+          <div class="ui-checkbox">
+            <label class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">boolean</label>
+            <input type="checkbox" data-corners="false" data-enhanced="true"></input>
           </div>
+          <p>description here</p>
+        </div>
+        <div data-role="collapsible" data-collapsed="false">
+          <h3>Dictionary</h3>
+          <!-- key-value pair -->
           <div data-role="collapsible" data-collapsed="false">
-            <h3>temperature</h3>
-            <input type="number" name="datapoint-key1" id="datapoint-key1" value="">
-            <p>measured in degrees celsius.</p>
+            <h3><input type="text" value=""></h3>
+            <input type="text" value="">
           </div>
+          <p>description here</p>
         </div>
         <input type="button" value="Log Your Data!" />
       </div>
