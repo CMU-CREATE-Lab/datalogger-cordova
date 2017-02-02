@@ -1,6 +1,10 @@
 var ShowChannelPage = {
 
   channel: null,
+  location: {
+    latitude: null,
+    longitude: null
+  },
 
 
   initialize: function () {
@@ -15,6 +19,8 @@ var ShowChannelPage = {
 
   onDeviceReady: function() {
     console.log("ShowChannelPage.onDeviceReady");
+    // listeners
+    $("#show_channel_submit").click(ShowChannelPage.onClickSubmit);
   },
 
 
@@ -50,15 +56,15 @@ var ShowChannelPage = {
       var description = field.description;
       if (["boolean"].includes(field.type)) {
         jChannelFields.append(
-          '<div class="collapsible_field" data-role="collapsible" data-collapsed="false"><h3>' + name + '</h3><div class="ui-checkbox"><label class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">' + name + '</label><input id="channel_field_' + name + '" type="checkbox" data-corners="false" data-enhanced="true"></input></div><p>' + description + '</p></div>'
+          '<div class="collapsible_field" data-role="collapsible" data-collapsed="false"><h3>' + name + '</h3><div class="ui-checkbox"><label class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">' + name + '</label><input type="checkbox" id="channel_field_' + name + '" data-corners="false" data-enhanced="true"></input></div><p>' + description + '</p></div>'
         );
       } else if (["integer", "double"].includes(field.type)) {
         jChannelFields.append(
-          '<div class="collapsible_field" data-role="collapsible" data-collapsed="false"><h3>' + name + '</h3><input type="number" value=""><p>' + description + '</p></div>'
+          '<div class="collapsible_field" data-role="collapsible" data-collapsed="false"><h3>' + name + '</h3><input type="number" id="channel_field_' + name + '" value=""><p>' + description + '</p></div>'
         );
       } else if (["string", "file", "channel", "dictionary"].includes(field.type)) {
         jChannelFields.append(
-          '<div class="collapsible_field" data-role="collapsible" data-collapsed="false"><h3>' + name + '</h3><input type="text" value=""><p>' + description + '</p></div>'
+          '<div class="collapsible_field" data-role="collapsible" data-collapsed="false"><h3>' + name + '</h3><input type="text" id="channel_field_' + name + '" value=""><p>' + description + '</p></div>'
         );
       } else {
         throw "FOUND BAD FIELD TYPE " + field.type;
@@ -82,5 +88,26 @@ var ShowChannelPage = {
 
 
   // callbacks
+
+
+  onClickSubmit: function() {
+    var result = {};
+    var fields = ShowChannelPage.channel.fields;
+
+    fields.forEach(function(field) {
+      var name = field.name;
+      if (name=="latitude") {
+        result["latitude"] = location.latitude;
+      } else if (name=="longitude") {
+        result["longitude"] = location.longitude;
+      } else {
+        // TODO check for value type
+        var value = $("#channel_field_"+name)[0].value;
+        result[name] = value;
+      }
+    });
+    console.log(result);
+    ShowChannelPage.channel.submitDataPoint(result);
+  }
 
 }

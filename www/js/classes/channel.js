@@ -37,9 +37,10 @@ Channel.prototype.submitDataPoint = function(key_values) {
     return i.name;
   });
   var data_keys = Object.keys(key_values);
+  var data_keys_set = new Set(data_keys);
 
   // only send if all channel keys are include in the datapoint
-  if (keys <= data_keys) {
+  if ( keys.every(k => data_keys_set.has(k)) ) {
     // TODO ajax call
     console.log("submitting data_keys="+data_keys);
   } else {
